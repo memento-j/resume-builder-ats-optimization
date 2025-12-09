@@ -1,8 +1,16 @@
 import CountUp from '@/components/CountUp';
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight} from 'lucide-react';
+import { useNavigate } from 'react-router';
 
 export default function Hero() {
+    const navigate = useNavigate();
+
+    const handleGoCreateResume = () => {
+        navigate("/create-resume")
+    };
+
+
     return(
         <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-slate-950">
             {/* Animated Blur Orbs */}
@@ -60,8 +68,8 @@ export default function Hero() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
                         <div className="text-sm font-medium flex gap-2 text-blue-200">
-                            <Sparkles className="w-4 h-4"/> 
-                            <p className='mt-0.5'>Perfect for First-Time Job Seekers</p>
+                            <Sparkles className="w-4 h-4 mt-0.5"/> 
+                            <p>Perfect for First-Time Job Seekers</p>
                         </div>
                     </motion.div>
                     
@@ -93,7 +101,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.7 }}
                     >
-                        <button className="group px-8 py-4 bg-linear-to-r from-blue-600 to-blue-700 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl shadow-blue-500/30 flex items-center gap-2">
+                        <button onClick={handleGoCreateResume} className="group px-8 py-4 bg-linear-to-r from-blue-600 to-blue-700 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:cursor-pointer shadow-2xl shadow-blue-500/30 flex items-center gap-2">
                             Create Your Resume
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </button>

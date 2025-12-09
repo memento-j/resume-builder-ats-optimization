@@ -10,7 +10,7 @@ export default function NotFoundPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center overflow-hidden relative">
+        <div className="min-h-screen bg-linear-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center overflow-hidden relative">
             {/* Animated Blur Orbs */}
             <motion.div
                 className="absolute top-20 left-10 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
@@ -47,7 +47,7 @@ export default function NotFoundPage() {
                     transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
                     className="mb-8"
                 >
-                    <h1 className="text-9xl md:text-[200px] font-bold bg-gradient-to-br from-blue-400 to-blue-600 bg-clip-text text-transparent leading-none">
+                    <h1 className="text-9xl md:text-[200px] font-bold bg-linear-to-br from-blue-400 to-blue-600 bg-clip-text text-transparent leading-none">
                         404
                     </h1>
                 </motion.div>
@@ -87,7 +87,7 @@ export default function NotFoundPage() {
                 >
                     <button
                         onClick={handleGoHome}
-                        className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl shadow-blue-500/30 flex items-center gap-2"
+                        className="group px-8 py-4 bg-linear-to-r from-blue-600 to-blue-700 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl shadow-blue-500/30 flex items-center gap-2"
                     >
                         <Home className="w-5 h-5" />
                         Go to Homepage

@@ -1,6 +1,13 @@
 import { Sparkles } from "lucide-react";
+import { useNavigate } from "react-router";
 
 export default function Navbar() {
+    const navigate = useNavigate();
+
+    const handleGoCreateResume = () => {
+        navigate("/create-resume")
+    };
+
     return(
         <nav className="fixed top-0 w-full bg-slate-950/90 backdrop-blur-md z-50 border-b border-blue-500/20">
             <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -10,7 +17,7 @@ export default function Navbar() {
                         ResumeAI
                     </span>
                 </div>
-                <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/20">
+                <button onClick={handleGoCreateResume} className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:cursor-pointer shadow-lg shadow-blue-500/20">
                     Get Started
                 </button>
             </div>

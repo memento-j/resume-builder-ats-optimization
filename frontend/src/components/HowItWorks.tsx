@@ -3,7 +3,7 @@ import { CheckCircle2 } from 'lucide-react';
 
 export default function HowItWorks() {
     return(
-        <section className="py-20 px-6 bg-slate-950 relative overflow-hidden">
+        <section className="py-20 px-6 bg-slate-900 relative overflow-hidden">
             <div className="max-w-5xl mx-auto relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Simple Process</h2>
@@ -22,7 +22,7 @@ export default function HowItWorks() {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: i * 0.2 }}
+                        transition={{ duration: 0.8, delay: i * 0.2, type: "spring" }}
                     >
                         <div className="shrink-0 w-16 h-16 bg-linear-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/30">
                             {item.step}

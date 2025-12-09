@@ -4,6 +4,7 @@ import Features from '@/components/Features';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
 import HowItWorks from '@/components/HowItWorks';
+import Pricing from '@/components/Pricing';
 
 export default function LandingPage() {
     return (
@@ -12,6 +13,7 @@ export default function LandingPage() {
             <Hero/>
             <Features/>
             <HowItWorks/>
+            <Pricing/>
             <CTA/>
             <Footer/>
         </div>

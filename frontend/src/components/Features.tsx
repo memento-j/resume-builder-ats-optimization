@@ -3,7 +3,7 @@ import { Sparkles, Zap, Target } from 'lucide-react';
 
 export default function Features() {
     return(
-        <section className="py-20 px-6 bg-slate-900 relative overflow-hidden">
+        <section className="py-20 px-6 bg-slate-900/50 relative overflow-hidden">
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -33,15 +33,16 @@ export default function Features() {
                     <motion.div 
                         key={i}
                         className="group p-8 bg-slate-800/80 rounded-2xl border border-slate-700/50 backdrop-blur-sm"
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         whileHover={{ 
                             scale: 1.05,
                             borderColor: "rgb(59 130 246)",
-                            boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.2)"
+                            boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.2)",
+                            transition: {duration: 0.3}
                         }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: i * 0.1 }}
+                        transition={{ duration: 0.8, type: "spring" }}
                     >
                         <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform duration-300">
                             {feature.icon}

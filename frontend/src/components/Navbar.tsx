@@ -1,13 +1,16 @@
 import { Sparkles } from "lucide-react";
 import { useNavigate } from "react-router";
+import { useAuth } from "@/contexts/AuthContext";
 
 export default function Navbar() {
     const navigate = useNavigate();
+    const { user, signOut } = useAuth();
 
     const handleGoCreateResume = () => {
         navigate("/create-resume")
     };
-
+    console.log(user);
+    
     return(
         <nav className="fixed top-0 w-full bg-slate-950/90 backdrop-blur-md z-50 border-b border-blue-500/20">
             <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
